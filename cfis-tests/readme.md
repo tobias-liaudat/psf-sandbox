@@ -2,7 +2,7 @@
 
 - CCDn = 38
 
-# # Test 1
+## Test 1
 
 |              |  Value |
 |:------------:|:------:|
@@ -41,7 +41,8 @@
 | Apply_degrad |  True  |
 
 
-Using all the stars!
-Validation will also be performed on all the stars.
+- Using all the stars!
 
-New tests will be performed on a separated train and test datasets
+- Validation will also be performed on all the stars.
+
+- New tests will be performed on a separated train and test datasets
