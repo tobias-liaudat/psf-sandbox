@@ -220,6 +220,7 @@
 
 |      Test 12 |  Value |
 |:------------:|:------:|
+|  CCD_n       |    38  | 
 |  n_eigenPSF  |    16  |
 |  n_eigenVec  |    5   |
 |  sigmaNoise  | 1e-3   |
@@ -227,11 +228,13 @@
 |   KSIG       |   1    |
 |   nb_iter    |   4    |
 | Apply_degrad |  True  |
-
+|   ALPHA      |   None |
+    
 </td><td>
 
 |     Test 13  |  Value |
 |:------------:|:------:|
+|  CCD_n       |    38  | 
 |  n_eigenPSF  |    16  |
 |  n_eigenVec  |    5   |
 |  sigmaNoise  | 1e-3   |
@@ -239,7 +242,8 @@
 |   KSIG       |   1    |
 |   nb_iter    |   2    |
 | Apply_degrad |  True  |
-
+|   ALPHA      |   None |
+    
 </td></tr> </table>
 
 ### Real CFIS data
@@ -412,18 +416,160 @@
 
 - JB datase used.
 
-|              |  Value |
+|     Test 8   |  Value |
 |:------------:|:------:|
+|  CCD_n       |    38  |
 |  n_eigenPSF  |    50  |
 |  n_eigenVec  |    5   |
 |  sigmaNoise  |  1e-3  |
 |   test_per   |   0.5  |
 |   KSIG       |   3    |
 | Apply_degrad |  True  |
+|   ALPHA      |   None | 
+    
 
 <img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/test-8-3D.png" width="600" align="middle">
 
 <img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test8.png" width="600" align="middle">
+
+
+
+## Test 9
+
+|      Test 9  |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    32  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  | 1e-3   |
+|   test_per   |   0.5  |
+|   KSIG       |   1    |
+| Apply_degrad |  True  |
+|   ALPHA      |   None | 
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test9.png" width="600" align="middle">
+
+## Test 10
+
+|     Test 10  |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    32  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  | 1e-3   |
+|   test_per   |   0.5  |
+|   KSIG       |   0.5  |
+| Apply_degrad |  True  |
+|   ALPHA      |   None | 
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test10.png" width="600" align="middle">
+
+## Test 11
+
+|   Test 11    |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    16  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  | 1e-3   |
+|   test_per   |   0.5  |
+|   KSIG       |   1    |
+| Apply_degrad |  True  |
+|   ALPHA      |   None | 
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test11.png" width="600" align="middle">
+
+## Test 12
+
+| Reduced dataset |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  | 
+|  n_eigenPSF  |    16  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  | 1e-3   |
+|   test_per   |   0.5  |
+|   KSIG       |   1    |
+|   nb_iter    |   4    |
+| Apply_degrad |  True  |
+|   ALPHA      |   None |
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test12.png" width="600" align="middle">
+
+## Test 13
+
+| Reduced dataset |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  | 
+|  n_eigenPSF  |    16  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  | 1e-3   |
+|   test_per   |   0.5  |
+|   KSIG       |   1    |
+|   nb_iter    |   2    |
+| Apply_degrad |  True  |
+|   ALPHA      |   None |
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test13.png" width="600" align="middle">
+
+## Test 14
+
+|    Test 14   |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  | 
+|  n_eigenPSF  |    24  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  | 1e-3   |
+|   test_per   |   0.5  |
+|   KSIG       |   0.1  |
+| Apply_degrad |  True  |
+|   ALPHA      |   None |
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test14.png" width="600" align="middle">
+
+## Test 15
+
+|   Test 15    |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |    
+|  n_eigenPSF  |    24  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  |   1e-3 |
+|   test_per   |   0.5  |
+|   KSIG       |   0.1  |
+| Apply_degrad |  True  |
+|   ALPHA      | PSFEx  | 
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test15.png" width="600" align="middle">
+
+## Test 16
+
+|     Test 16  |  Value |
+|:------------:|:------:|
+|  CCD_n       |    2   | 
+|  n_eigenPSF  |    24  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  |  1e-3  |
+|   test_per   |   0.5  |
+|   KSIG       |   0.1  |
+| Apply_degrad |  True  |
+|   ALPHA      |   None | 
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test16.png" width="600" align="middle">
+
+## Test 17
+
+|     Test 17  |  Value |
+|:------------:|:------:|
+|  CCD_n       |    2   | 
+|  n_eigenPSF  |    24  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  |  1e-3  |
+|   test_per   |   0.5  |
+|   KSIG       |   0.1  |
+| Apply_degrad |  True  |
+|   ALPHA      |  PSFEx |
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test17.png" width="600" align="middle">
 
 ***
 
