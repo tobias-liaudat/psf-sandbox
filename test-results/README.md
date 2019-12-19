@@ -8,8 +8,6 @@
 
 ### Simulated data
 
-### Simulated data
-
 <table>
 <tr><th> Test 1 </th><th> Test 2 </th><th> Test 3 </th></tr>
 <tr><td>
