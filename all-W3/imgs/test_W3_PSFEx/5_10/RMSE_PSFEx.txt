@@ -1,0 +1,6 @@
+(shapepipe) dapmcc6:Data_preprocessing tliaudat$ python MeanShapes_Sundancer.py 5 10 /Users/tliaudat/Documents/PhD/codes/venv_p3/all-W3-tests/validation/test-PSFEx/shapepipe_run_2020-01-02_13-03-56/psfexinterp_runner/output/full_starcat.fits
+e1 residual RMSE: 0.001235
+
+e2 residual RMSE: 0.001263
+
+R2 residual RMSE: 0.317929
