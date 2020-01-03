@@ -2,6 +2,8 @@
 
 The test where done using real data from CFIS.
 
+For the complete set of result images go to the imgs folder.
+
 ***
 
 ### Test's parameters
