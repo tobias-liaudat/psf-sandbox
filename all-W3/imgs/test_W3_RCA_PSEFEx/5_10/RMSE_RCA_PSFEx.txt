@@ -4,3 +4,9 @@ e1 residual RMSE: 0.001373
 e2 residual RMSE: 0.001356
 
 R2 residual RMSE: 0.319939
+
+TOTAL e1 residual RMSE: 0.016626
+
+TOTAL e2 residual RMSE: 0.016486
+
+TOTAL R2 residual RMSE: 2.873945
