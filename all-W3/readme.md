@@ -1,8 +1,10 @@
 # Test over all W3 from CFIS
 
-The test where done using real data from CFIS.
+- The test where done using real data from CFIS.
 
-For the complete set of result images go to the imgs folder.
+- For the complete set of result images go to the imgs folder.
+
+- The training and the validation was done over the same set of stars (all of them).
 
 ***
 
