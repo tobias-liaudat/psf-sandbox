@@ -58,6 +58,7 @@ The test where done using real data from CFIS.
 
 |     PSFEx   |  Value |
 |:------------:|:------:|
+|  n_eigenPSF  |    6  |
 |  Standard config  |    True  |
 
 
