@@ -71,9 +71,18 @@
 
 ### Test RMSE performance
 
-The RMSE of the residues was calculated on a CCD segmented on a 5x10 grid where the different values where the mean of the values on the bin is considered.
+The RMSE calculated on all the test/train stars before any mean is performed.
 
 | Residues RMSE |  RCA_4    |  RCA_24   |  RCA_Hybrid |  RCA_PSFEx |  PSFEx        |
+|:-------------:|:---------:|:---------:|:-----------:|:----------:|:-------------:|
+|  e1           | 0.018127  | 0.017439  | 0.016467    | 0.016626   | **0.016449**  |
+|  e2           | 0.017123  | 0.016727  | **0.016203** | 0.016486  | 0.016313  |
+|  R2           | 4.795213  | 5.260821  | 3.989269    | 2.873945   | **2.873515**  |
+
+
+The RMSE of the residues was calculated on a CCD segmented on a 5x10 grid where the different values where the mean of the values on the bin is considered.
+
+| Residues RMSE 5x10 grid |  RCA_4    |  RCA_24   |  RCA_Hybrid |  RCA_PSFEx |  PSFEx        |
 |:-------------:|:---------:|:---------:|:-----------:|:----------:|:-------------:|
 |  e1           | 0.005348  | 0.002530  | 0.001494    | 0.001373   | **0.001235**  |
 |  e2           | 0.003055  | 0.001660  | 0.001313    | 0.001356   | **0.001263**  |
