@@ -2,6 +2,165 @@
 
 ***
 
+
+
+## MSE and ellipticity results
+
+- **Dataset**: Simulated data based on the CFIS ellipticity variations using Sextractor
+
+This test provide a fair comparison between the RCA-family methods and the original PSFEx on simulated data.
+
+Tests 22 to 28 are done over the Sextractor dataset so PSFEx can be used as comparison and the pixel-MSE values are calculated.
+
+|      Tests                         |  pixel-MSE     | pixel-RMSE     |  e1-RMSE   | e2-RMSE    |  R2-RMSE   |
+|:----------------------------------:|:--------------:|:--------------:|:----------:|:----------:|:----------:|
+|**22**: RCA_PSFEx (KSIG=0.1)        |  2.365074e-07  |  4.863203e-04  |  0.001061  |  0.000680  |  0.486363  |
+|**23**: RCA_hybrid (eig18, KSIG=0.1)|  4.419285e-07  |  6.647770e-04  |**0.000851**|  0.000694  |  0.307546  |
+|**24**: RCA (eig24, KSIG=0.1)       |  4.597328e-07  |  6.780360e-04  |  0.000906  |**0.000670**|**0.300346**|
+|**25**: RCA_PSFEx (KSIG=0)          |  2.476524e-07  |  4.976468e-04  |  0.001030  |  0.000680  |  0.486895  |
+|**26**: RCA_PSFEx (KSIG=1)          |**2.003553e-07**|**4.476107e-04**|  0.001540  |  0.000689  |  0.460138  |
+|**27**: RCA_PSFEx (KSIG=3)          |  2.015617e-07  |  4.489562e-04  |  0.002516  |  0.000777  |  0.399802  |
+|**28**: PSFEx                       |  4.112598e-07  |  6.412954e-04  |  0.001019  |  0.000693  |  0.399379  |
+
+
+## Test descriptions
+
+<table>
+<tr><th> Test 22 </th><th> Test 23 </th><th> Test 24 </th></tr>
+<tr><td>
+
+|      Test 22  |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    6  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  | 1e-3 |
+|   test_per   |   0.5  |
+|   KSIG       |   0.1    |
+| Apply_degrad |  True  |
+|   ALPHA      |   PSFEx |
+
+</td><td>
+
+|     Test 23   |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    18  |
+|  n_eigenVec  |    5  |
+|  sigmaNoise  | 1e-3 |
+|   test_per   |   0.5  |
+|   KSIG       |   0.1    |
+| Apply_degrad |  True  |
+|   ALPHA      |   hybrid_1 |
+
+</td><td>
+
+|   Test 24     |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    24  |
+|  n_eigenVec  |    5  |
+|  sigmaNoise  | 1e-3 |
+|   test_per   |   0.5  |
+|   KSIG       |   0.1    |
+| Apply_degrad |  True  |
+|   ALPHA      |   None |
+
+</td></tr> </table>
+
+
+<table>
+<tr><th> Test 25 </th><th> Test 26 </th><th> Test 27 </th></tr>
+<tr><td>
+
+|    Test 25    |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    6  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  | 1e-3 |
+|   test_per   |   0.5  |
+|   KSIG       |   0.0    |
+| Apply_degrad |  True  |
+|   ALPHA      |   PSFEx |
+
+
+</td><td>
+
+|   Test 26     |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    6  |
+|  n_eigenVec  |    5  |
+|  sigmaNoise  | 1e-3 |
+|   test_per   |   0.5  |
+|   KSIG       |   1.0    |
+| Apply_degrad |  True  |
+|   ALPHA      |   PSFEx |
+
+</td><td>
+
+|     Test 27   |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  n_eigenPSF  |    6  |
+|  n_eigenVec  |    5   |
+|  sigmaNoise  |  1e-3  |
+|   test_per   |   0.5  |
+|   KSIG       |   3.0    |
+| Apply_degrad |  True  |
+|   ALPHA      |   PSFEx |
+
+</td></tr> </table>
+
+
+<table>
+<tr><th> Test 28 </th></tr>
+<tr><td>
+
+|      Test 28  |  Value |
+|:------------:|:------:|
+|  CCD_n       |    38  |
+|  PSFEx  |    regular parameters  |
+|  sigmaNoise  | 1e-3 |
+|   test_per   |   0.5  |
+
+</td></tr> </table>
+
+
+## Test plots
+
+### Test 22
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test22.png" width="800" align="middle">
+
+### Test 23
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test23.png" width="800" align="middle">
+
+### Test 24
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test24.png" width="800" align="middle">
+
+### Test 25
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test25.png" width="800" align="middle">
+
+### Test 26
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test26.png" width="800" align="middle">
+
+### Test 27
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test27.png" width="800" align="middle">
+
+### Test 28
+
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test28.png" width="800" align="middle">
+
+
+***
+
 # TL
 
 ## Test summary
@@ -370,7 +529,7 @@
 |   KSIG       |   3    |
 | Apply_degrad |  True  |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test1.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test1.png" width="800" align="middle">
 
 ## Test 2
 
@@ -383,7 +542,7 @@
 |   KSIG       |   3    |
 | Apply_degrad |  True  |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test2.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test2.png" width="800" align="middle">
 
 ## Test 3
 
@@ -396,7 +555,7 @@
 |   KSIG       |   3    |
 | Apply_degrad |  True  |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test3.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test3.png" width="800" align="middle">
 
 ## Test 4
 
@@ -409,7 +568,7 @@
 |   KSIG       |   3    |
 | Apply_degrad |  True  |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test4.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test4.png" width="800" align="middle">
 
 ## Test 5
 
@@ -422,7 +581,7 @@
 |   KSIG       |   3    |
 | Apply_degrad |  True  |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test5.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test5.png" width="800" align="middle">
 
 
 
@@ -441,7 +600,7 @@
 
 <img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/test-7-3D.png" width="600" align="middle">
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test7.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test7.png" width="800" align="middle">
 
 
 ## Test 8
@@ -462,7 +621,7 @@
 
 <img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/test-8-3D.png" width="600" align="middle">
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test8.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test8.png" width="800" align="middle">
 
 
 
@@ -479,7 +638,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      |   None |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test9.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test9.png" width="800" align="middle">
 
 ## Test 10
 
@@ -494,7 +653,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      |   None |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test10.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test10.png" width="800" align="middle">
 
 ## Test 11
 
@@ -509,7 +668,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      |   None |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test11.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test11.png" width="800" align="middle">
 
 ## Test 12
 
@@ -525,7 +684,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      |   None |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test12.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test12.png" width="800" align="middle">
 
 ## Test 13
 
@@ -541,7 +700,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      |   None |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test13.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test13.png" width="800" align="middle">
 
 ## Test 14
 
@@ -556,7 +715,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      |   None |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test14.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test14.png" width="800" align="middle">
 
 ## Test 15
 
@@ -571,7 +730,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      | PSFEx  |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test15.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test15.png" width="800" align="middle">
 
 ## Test 16
 
@@ -586,7 +745,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      |   None |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test16.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test16.png" width="800" align="middle">
 
 ## Test 17
 
@@ -601,7 +760,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      |  PSFEx |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test17.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test17.png" width="800" align="middle">
 
 
 ## Test 18
@@ -618,7 +777,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      | hybrid_1 |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test18.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test18.png" width="800" align="middle">
 
 
 ## Test 19
@@ -635,7 +794,7 @@
 | Apply_degrad |  True  |
 |   ALPHA      | hybrid_2 |
 
-<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test19.png" width="600" align="middle">
+<img src="https://github.com/tobias-liaudat/psf-sandbox/blob/master/test-results/imgs/TL_test19.png" width="800" align="middle">
 
 
 ***
